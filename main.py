@@ -23,7 +23,7 @@ help = '''Данный бот поможет вам советом, как пр�
 intents = discord.Intents.default()
 intents.members = True
 intents.message_content = True
-bot = commands.Bot(command_prefix='?', description=description, intents=intents)
+bot = commands.Bot(command_prefix='?', intents=intents)
 @bot.command()
 async def ecology(ctx):
     with open("images/rit.jpg", 'rb') as f:
