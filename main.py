@@ -1,6 +1,6 @@
 import discord
 from discord.ext import commands
-description = '''**Основные принципы предотвращения загрязнения природы при выбрасывании мусора.**
+maininfo = '''**Основные принципы предотвращения загрязнения природы при выбрасывании мусора.**
 1. Для установления типа выбрасываемого предмета, обратите внимание на задную этикетку предмета.
 Если на ней изображен знак огня:
     Это огнеопасный предмет.
@@ -32,7 +32,7 @@ async def ecology(ctx):
         picture2 = discord.File(f)
     with open("images/firewarn.jpg", 'rb') as f:
         picture3 = discord.File(f)
-    await ctx.send(description)
+    await ctx.send(maininfo)
     await ctx.send(file=picture)
     await ctx.send(file=picture2)
     await ctx.send(file=picture3)
