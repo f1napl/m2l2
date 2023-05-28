@@ -18,6 +18,8 @@ description = '''**Основные принципы предотвращени�
 
 || Снизу есть картинки, для того что-бы можно было удостоверится в типе предмета. ||
 '''
+
+help = '''Данный бот поможет вам советом, как правильно выбросить мусор.'''
 intents = discord.Intents.default()
 intents.members = True
 intents.message_content = True
@@ -34,4 +36,7 @@ async def ecology(ctx):
     await ctx.send(file=picture)
     await ctx.send(file=picture2)
     await ctx.send(file=picture3)
+@bot.command()
+async def help(ctx):
+    await ctx.send(help)
 bot.run("1234")
