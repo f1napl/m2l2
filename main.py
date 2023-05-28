@@ -19,9 +19,9 @@ async def ecology(ctx):
     await ctx.send(file=picture2)
     await ctx.send(file=picture3)
 @bot.command()
-async def help(ctx):
-    await ctx.send(help)
+async def helpme(ctx):
+    await ctx.send(helpme)
 @bot.command()
 async def useful_links(ctx):
     await ctx.send(links)
-bot.run("1234")
+bot.run(1234)
