@@ -1,10 +1,17 @@
 import discord
 from discord.ext import commands
 from text import *
+import random
+import requests
 links = '''**Википедия со знаками переработки - https://ru.wikipedia.org/wiki/%D0%9A%D0%BE%D0%B4%D1%8B_%D0%BF%D0%B5%D1%80%D0%B5%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%BA%D0%B8**'''
 intents = discord.Intents.default()
 intents.members = True
 intents.message_content = True
+def randomImage():
+    url = random.choice(randomLink)
+    res = requests.get(url)
+    data = res.json()
+    return data['url']
 bot = commands.Bot(command_prefix='?', intents=intents)
 @bot.command()
 async def ecology(ctx):
@@ -24,4 +31,7 @@ async def helpme(ctx):
 @bot.command()
 async def useful_links(ctx):
     await ctx.send(links)
-bot.run(1234)
+@bot.command()
+async def animals(ctx):
+    await ctx.send(randomImage())
+bot.run("MTEwNDY2NTg1MDM3MzQ3NjM2Mg.GuBw-6.as_Cnaw_sI1diGnurDPpIEz-PqYyAS-F0jPEYA")
