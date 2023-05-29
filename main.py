@@ -34,4 +34,4 @@ async def useful_links(ctx):
 @bot.command()
 async def animals(ctx):
     await ctx.send(randomImage())
-bot.run("MTEwNDY2NTg1MDM3MzQ3NjM2Mg.GuBw-6.as_Cnaw_sI1diGnurDPpIEz-PqYyAS-F0jPEYA")
+bot.run(1234)
