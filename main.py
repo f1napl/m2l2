@@ -27,11 +27,11 @@ async def ecology(ctx):
     await ctx.send(file=picture3)
 @bot.command()
 async def helpme(ctx):
-    await ctx.send(helpme)
+    await ctx.send(helpme1)
 @bot.command()
 async def useful_links(ctx):
     await ctx.send(links)
 @bot.command()
 async def animals(ctx):
     await ctx.send(randomImage())
-bot.run(1234)
+bot.run("1234")
